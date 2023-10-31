@@ -14,7 +14,7 @@ from environs import Env
 from mastodon import Mastodon
 
 env = Env().read_env()
-7
+
 # Register your app! This only needs to be done once (per server, or when
 # distributing rather than hosting an application, most likely per device and server).
 # Uncomment the code and substitute in your information:

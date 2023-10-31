@@ -3,18 +3,23 @@
 '''
 import requests, os
 from environs import Env
+from datetime import datetime, timedelta
 
 env = Env().read_env()
 
+# Schedule time - needs to be >5 minutes:
+now = datetime.now()
+schedule = datetime.now() + timedelta(minutes=10)
+
 # Build our URL:
-server      = "https://mastodon.ie"
-params      = ""
-url         = f'{server}/api/v1/statuses/{params}'
-message     = f'Tooting with Python 🐍 🤖'
+server      = f'https://mastodon.ie'
+url         = f'{server}/api/v1/statuses/'
+message     = f'Sending a scheduled toot: 📆\n Sent at: {now.strftime("%I:%M%p")}\n Displayed at: {schedule.strftime("%I:%M%p")}'
 
 # Add our status message:
 form_data = {
-    'status' : message 
+    'status'        : message,
+    'scheduled_at'  : schedule
 }
 
 # Build our header:
@@ -25,6 +30,7 @@ header = {
 
 # Send request:
 response = requests.post(url, data=form_data, headers=header)
+print(message)
 
 # Print the response to screen:
 print(response.json())

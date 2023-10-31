@@ -7,10 +7,10 @@ from environs import Env
 env = Env().read_env()
 
 # Build our URL:
-server      = "https://mastodon.ie"
-params      = ""
+server      = 'https://mastodon.ie'
+params      = ''
 url         = f'{server}/api/v1/statuses/{params}'
-message     = f'Tooting with Python 🐍 🤖'
+message     = 'Tooting with Python 🐍 🤖'
 
 # Add our status message:
 form_data = {
