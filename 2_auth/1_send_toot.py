@@ -10,9 +10,9 @@ env = Env().read_env()
 server      = 'https://mastodon.ie'
 params      = ''
 url         = f'{server}/api/v1/statuses/{params}'
-message     = 'Tooting with Python 🐍 🤖'
 
 # Add our status message:
+message     = 'Tooting with Python 🐍 🤖'
 form_data = {
     'status' : message 
 }

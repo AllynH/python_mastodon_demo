@@ -19,7 +19,7 @@ env = Env().read_env()
 # distributing rather than hosting an application, most likely per device and server).
 # Uncomment the code and substitute in your information:
 Mastodon.create_app(
-    'pycon_ieapp',
+    'pycon_ie_app',
     api_base_url = 'https://mastodon.ie',
     to_file = 'pycon_ie_clientcred.secret'
 )

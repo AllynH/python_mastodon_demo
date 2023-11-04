@@ -3,6 +3,7 @@
 startup*.bat
 .env
 *.secret
+unused_code/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

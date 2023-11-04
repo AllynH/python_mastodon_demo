@@ -1,4 +1,5 @@
 '''
+    Docs: https://docs.joinmastodon.org/methods/timelines/
 '''
 import requests
 
